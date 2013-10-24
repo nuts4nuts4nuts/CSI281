@@ -1,0 +1,62 @@
+MergeSort Evaluation: 
+
+
+Run 1:
+
+Random Numbers: 
+MergeSort took 2.90049e-005 seconds to sort an array of size 10.
+MergeSort took 0.000231147 seconds to sort an array of size 100.
+MergeSort took 0.00225569 seconds to sort an array of size 1000.
+MergeSort took 0.0230607 seconds to sort an array of size 10000.
+
+Best Case: 
+MergeSort took 1.47255e-005 seconds to sort an array of size 10.
+MergeSort took 0.00021062 seconds to sort an array of size 100.
+MergeSort took 0.00208389 seconds to sort an array of size 1000.
+MergeSort took 0.0235283 seconds to sort an array of size 10000.
+
+Worst Case: 
+MergeSort took 3.03436e-005 seconds to sort an array of size 10.
+MergeSort took 0.000238732 seconds to sort an array of size 100.
+MergeSort took 0.00204507 seconds to sort an array of size 1000.
+MergeSort took 0.0218456 seconds to sort an array of size 10000.
+
+Run 2:
+
+Random Numbers: 
+MergeSort took 2.5435e-005 seconds to sort an array of size 10.
+MergeSort took 0.000197679 seconds to sort an array of size 100.
+MergeSort took 0.00203213 seconds to sort an array of size 1000.
+MergeSort took 0.0239937 seconds to sort an array of size 10000.
+
+Best Case: 
+MergeSort took 2.45426e-005 seconds to sort an array of size 10.
+MergeSort took 0.000442213 seconds to sort an array of size 100.
+MergeSort took 0.00233199 seconds to sort an array of size 1000.
+MergeSort took 0.0215564 seconds to sort an array of size 10000.
+
+Worst Case: 
+MergeSort took 2.5435e-005 seconds to sort an array of size 10.
+MergeSort took 0.000186524 seconds to sort an array of size 100.
+MergeSort took 0.00200134 seconds to sort an array of size 1000.
+MergeSort took 0.0217657 seconds to sort an array of size 10000.
+
+Run 3:
+
+Random Numbers: 
+MergeSort took 4.73002e-005 seconds to sort an array of size 10.
+MergeSort took 0.000278447 seconds to sort an array of size 100.
+MergeSort took 0.00203257 seconds to sort an array of size 1000.
+MergeSort took 0.0240308 seconds to sort an array of size 10000.
+
+Best Case: 
+MergeSort took 2.76662e-005 seconds to sort an array of size 10.
+MergeSort took 0.000199464 seconds to sort an array of size 100.
+MergeSort took 0.0022954 seconds to sort an array of size 1000.
+MergeSort took 0.0226756 seconds to sort an array of size 10000.
+
+Worst Case: 
+MergeSort took 4.77465e-005 seconds to sort an array of size 10.
+MergeSort took 0.00031593 seconds to sort an array of size 100.
+MergeSort took 0.00212093 seconds to sort an array of size 1000.
+MergeSort took 0.0224185 seconds to sort an array of size 10000.

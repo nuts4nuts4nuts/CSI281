@@ -1,0 +1,62 @@
+QuickSort Evaluation: 
+
+
+Run 1:
+
+Random Numbers: 
+QuickSort took 2.67737e-006 seconds to sort an array of size 10.
+QuickSort took 3.92681e-005 seconds to sort an array of size 100.
+QuickSort took 0.000603301 seconds to sort an array of size 1000.
+QuickSort took 0.00715439 seconds to sort an array of size 10000.
+
+Best Case: 
+QuickSort took 1.33869e-006 seconds to sort an array of size 10.
+QuickSort took 2.1419e-005 seconds to sort an array of size 100.
+QuickSort took 0.000283801 seconds to sort an array of size 1000.
+QuickSort took 0.00410754 seconds to sort an array of size 10000.
+
+Worst Case: 
+QuickSort took 1.78492e-006 seconds to sort an array of size 10.
+QuickSort took 2.1419e-005 seconds to sort an array of size 100.
+QuickSort took 0.000287818 seconds to sort an array of size 1000.
+QuickSort took 0.00428737 seconds to sort an array of size 10000.
+
+Run 2:
+
+Random Numbers: 
+QuickSort took 2.67737e-006 seconds to sort an array of size 10.
+QuickSort took 3.52521e-005 seconds to sort an array of size 100.
+QuickSort took 0.000554662 seconds to sort an array of size 1000.
+QuickSort took 0.00693886 seconds to sort an array of size 10000.
+
+Best Case: 
+QuickSort took 1.33869e-006 seconds to sort an array of size 10.
+QuickSort took 2.09728e-005 seconds to sort an array of size 100.
+QuickSort took 0.000282463 seconds to sort an array of size 1000.
+QuickSort took 0.00399553 seconds to sort an array of size 10000.
+
+Worst Case: 
+QuickSort took 1.78492e-006 seconds to sort an array of size 10.
+QuickSort took 2.18652e-005 seconds to sort an array of size 100.
+QuickSort took 0.000286479 seconds to sort an array of size 1000.
+QuickSort took 0.00469165 seconds to sort an array of size 10000.
+
+Run 3:
+
+Random Numbers: 
+QuickSort took 2.67737e-006 seconds to sort an array of size 10.
+QuickSort took 3.97144e-005 seconds to sort an array of size 100.
+QuickSort took 0.000628736 seconds to sort an array of size 1000.
+QuickSort took 0.00766889 seconds to sort an array of size 10000.
+
+Best Case: 
+QuickSort took 1.33869e-006 seconds to sort an array of size 10.
+QuickSort took 2.1419e-005 seconds to sort an array of size 100.
+QuickSort took 0.000365461 seconds to sort an array of size 1000.
+QuickSort took 0.00439491 seconds to sort an array of size 10000.
+
+Worst Case: 
+QuickSort took 2.23114e-006 seconds to sort an array of size 10.
+QuickSort took 2.36501e-005 seconds to sort an array of size 100.
+QuickSort took 0.00030879 seconds to sort an array of size 1000.
+QuickSort took 0.00451896 seconds to sort an array of size 10000.

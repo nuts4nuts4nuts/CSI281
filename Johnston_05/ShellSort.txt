@@ -1,0 +1,62 @@
+ShellSort Evaluation: 
+
+
+Run 1:
+
+Random Numbers: 
+ShellSort took 2.67737e-006 seconds to sort an array of size 10.
+ShellSort took 0.000160642 seconds to sort an array of size 100.
+ShellSort took 0.016975 seconds to sort an array of size 1000.
+ShellSort took 1.71292 seconds to sort an array of size 10000.
+
+Best Case: 
+ShellSort took 1.33869e-006 seconds to sort an array of size 10.
+ShellSort took 1.60642e-005 seconds to sort an array of size 100.
+ShellSort took 0.000268183 seconds to sort an array of size 1000.
+ShellSort took 0.00367693 seconds to sort an array of size 10000.
+
+Worst Case: 
+ShellSort took 2.23114e-006 seconds to sort an array of size 10.
+ShellSort took 3.97144e-005 seconds to sort an array of size 100.
+ShellSort took 0.000513163 seconds to sort an array of size 1000.
+ShellSort took 0.00654662 seconds to sort an array of size 10000.
+
+Run 2:
+
+Random Numbers: 
+ShellSort took 2.23114e-006 seconds to sort an array of size 10.
+ShellSort took 0.000103079 seconds to sort an array of size 100.
+ShellSort took 0.0125364 seconds to sort an array of size 1000.
+ShellSort took 1.81456 seconds to sort an array of size 10000.
+
+Best Case: 
+ShellSort took 1.33869e-006 seconds to sort an array of size 10.
+ShellSort took 1.60642e-005 seconds to sort an array of size 100.
+ShellSort took 0.0002307 seconds to sort an array of size 1000.
+ShellSort took 0.00372244 seconds to sort an array of size 10000.
+
+Worst Case: 
+ShellSort took 2.23114e-006 seconds to sort an array of size 10.
+ShellSort took 2.98973e-005 seconds to sort an array of size 100.
+ShellSort took 0.000516733 seconds to sort an array of size 1000.
+ShellSort took 0.00670905 seconds to sort an array of size 10000.
+
+Run 3:
+
+Random Numbers: 
+ShellSort took 2.23114e-006 seconds to sort an array of size 10.
+ShellSort took 0.000133422 seconds to sort an array of size 100.
+ShellSort took 0.0152494 seconds to sort an array of size 1000.
+ShellSort took 1.59923 seconds to sort an array of size 10000.
+
+Best Case: 
+ShellSort took 1.33869e-006 seconds to sort an array of size 10.
+ShellSort took 1.65105e-005 seconds to sort an array of size 100.
+ShellSort took 0.000238732 seconds to sort an array of size 1000.
+ShellSort took 0.00356314 seconds to sort an array of size 10000.
+
+Worst Case: 
+ShellSort took 1.78492e-006 seconds to sort an array of size 10.
+ShellSort took 2.98973e-005 seconds to sort an array of size 100.
+ShellSort took 0.000532351 seconds to sort an array of size 1000.
+ShellSort took 0.0064962 seconds to sort an array of size 10000.

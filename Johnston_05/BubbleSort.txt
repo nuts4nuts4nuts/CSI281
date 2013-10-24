@@ -1,0 +1,62 @@
+BubbleSort Evaluation: 
+
+
+Run 1:
+
+Random Numbers: 
+BubbleSort took 4.46229e-006 seconds to sort an array of size 10.
+BubbleSort took 0.000356983 seconds to sort an array of size 100.
+BubbleSort took 0.0338335 seconds to sort an array of size 1000.
+BubbleSort took 3.54681 seconds to sort an array of size 10000.
+
+Best Case: 
+BubbleSort took 4.46229e-007 seconds to sort an array of size 10.
+BubbleSort took 3.1236e-006 seconds to sort an array of size 100.
+BubbleSort took 3.61445e-005 seconds to sort an array of size 1000.
+BubbleSort took 0.000266399 seconds to sort an array of size 10000.
+
+Worst Case: 
+BubbleSort took 5.80097e-006 seconds to sort an array of size 10.
+BubbleSort took 0.000391343 seconds to sort an array of size 100.
+BubbleSort took 0.0404256 seconds to sort an array of size 1000.
+BubbleSort took 4.05658 seconds to sort an array of size 10000.
+
+Run 2:
+
+Random Numbers: 
+BubbleSort took 3.1236e-006 seconds to sort an array of size 10.
+BubbleSort took 0.000331102 seconds to sort an array of size 100.
+BubbleSort took 0.0355635 seconds to sort an array of size 1000.
+BubbleSort took 3.52333 seconds to sort an array of size 10000.
+
+Best Case: 
+BubbleSort took 4.46229e-007 seconds to sort an array of size 10.
+BubbleSort took 3.1236e-006 seconds to sort an array of size 100.
+BubbleSort took 2.76662e-005 seconds to sort an array of size 1000.
+BubbleSort took 0.000274877 seconds to sort an array of size 10000.
+
+Worst Case: 
+BubbleSort took 4.46229e-006 seconds to sort an array of size 10.
+BubbleSort took 0.000403837 seconds to sort an array of size 100.
+BubbleSort took 0.0407126 seconds to sort an array of size 1000.
+BubbleSort took 4.06101 seconds to sort an array of size 10000.
+
+Run 3:
+
+Random Numbers: 
+BubbleSort took 2.67737e-006 seconds to sort an array of size 10.
+BubbleSort took 0.000303436 seconds to sort an array of size 100.
+BubbleSort took 0.034825 seconds to sort an array of size 1000.
+BubbleSort took 3.49627 seconds to sort an array of size 10000.
+
+Best Case: 
+BubbleSort took 4.46229e-007 seconds to sort an array of size 10.
+BubbleSort took 2.67737e-006 seconds to sort an array of size 100.
+BubbleSort took 2.67737e-005 seconds to sort an array of size 1000.
+BubbleSort took 0.000266845 seconds to sort an array of size 10000.
+
+Worst Case: 
+BubbleSort took 4.01606e-006 seconds to sort an array of size 10.
+BubbleSort took 0.000400713 seconds to sort an array of size 100.
+BubbleSort took 0.04024 seconds to sort an array of size 1000.
+BubbleSort took 4.05398 seconds to sort an array of size 10000.

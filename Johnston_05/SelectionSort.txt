@@ -1,0 +1,62 @@
+SelectionSort Evaluation: 
+
+
+Run 1:
+
+Random Numbers: 
+SelectionSort took 2.67737e-006 seconds to sort an array of size 10.
+SelectionSort took 0.000164658 seconds to sort an array of size 100.
+SelectionSort took 0.0143494 seconds to sort an array of size 1000.
+SelectionSort took 1.45788 seconds to sort an array of size 10000.
+
+Best Case: 
+SelectionSort took 2.23114e-006 seconds to sort an array of size 10.
+SelectionSort took 0.000143686 seconds to sort an array of size 100.
+SelectionSort took 0.0154462 seconds to sort an array of size 1000.
+SelectionSort took 1.47686 seconds to sort an array of size 10000.
+
+Worst Case: 
+SelectionSort took 1.78492e-006 seconds to sort an array of size 10.
+SelectionSort took 0.000138331 seconds to sort an array of size 100.
+SelectionSort took 0.014145 seconds to sort an array of size 1000.
+SelectionSort took 1.53907 seconds to sort an array of size 10000.
+
+Run 2:
+
+Random Numbers: 
+SelectionSort took 2.23114e-006 seconds to sort an array of size 10.
+SelectionSort took 0.000144132 seconds to sort an array of size 100.
+SelectionSort took 0.0146519 seconds to sort an array of size 1000.
+SelectionSort took 1.4461 seconds to sort an array of size 10000.
+
+Best Case: 
+SelectionSort took 1.78492e-006 seconds to sort an array of size 10.
+SelectionSort took 0.000135207 seconds to sort an array of size 100.
+SelectionSort took 0.0141397 seconds to sort an array of size 1000.
+SelectionSort took 1.47687 seconds to sort an array of size 10000.
+
+Worst Case: 
+SelectionSort took 2.23114e-006 seconds to sort an array of size 10.
+SelectionSort took 0.000164658 seconds to sort an array of size 100.
+SelectionSort took 0.0143186 seconds to sort an array of size 1000.
+SelectionSort took 1.53897 seconds to sort an array of size 10000.
+
+Run 3:
+
+Random Numbers: 
+SelectionSort took 2.23114e-006 seconds to sort an array of size 10.
+SelectionSort took 0.000143686 seconds to sort an array of size 100.
+SelectionSort took 0.0151396 seconds to sort an array of size 1000.
+SelectionSort took 1.4259 seconds to sort an array of size 10000.
+
+Best Case: 
+SelectionSort took 1.78492e-006 seconds to sort an array of size 10.
+SelectionSort took 0.000257474 seconds to sort an array of size 100.
+SelectionSort took 0.0148188 seconds to sort an array of size 1000.
+SelectionSort took 1.46393 seconds to sort an array of size 10000.
+
+Worst Case: 
+SelectionSort took 1.78492e-006 seconds to sort an array of size 10.
+SelectionSort took 0.000134315 seconds to sort an array of size 100.
+SelectionSort took 0.0147898 seconds to sort an array of size 1000.
+SelectionSort took 1.52965 seconds to sort an array of size 10000.

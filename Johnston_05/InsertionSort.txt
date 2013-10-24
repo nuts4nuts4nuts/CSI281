@@ -1,0 +1,62 @@
+InsertionSort Evaluation: 
+
+
+Run 1:
+
+Random Numbers: 
+InsertionSort took 1.33869e-006 seconds to sort an array of size 10.
+InsertionSort took 7.98749e-005 seconds to sort an array of size 100.
+InsertionSort took 0.00716286 seconds to sort an array of size 1000.
+InsertionSort took 0.729699 seconds to sort an array of size 10000.
+
+Best Case: 
+InsertionSort took 4.46229e-007 seconds to sort an array of size 10.
+InsertionSort took 3.1236e-006 seconds to sort an array of size 100.
+InsertionSort took 3.7037e-005 seconds to sort an array of size 1000.
+InsertionSort took 0.000445783 seconds to sort an array of size 10000.
+
+Worst Case: 
+InsertionSort took 1.33869e-006 seconds to sort an array of size 10.
+InsertionSort took 0.000144132 seconds to sort an array of size 100.
+InsertionSort took 0.0149112 seconds to sort an array of size 1000.
+InsertionSort took 1.46759 seconds to sort an array of size 10000.
+
+Run 2:
+
+Random Numbers: 
+InsertionSort took 1.33869e-006 seconds to sort an array of size 10.
+InsertionSort took 7.31815e-005 seconds to sort an array of size 100.
+InsertionSort took 0.00706112 seconds to sort an array of size 1000.
+InsertionSort took 0.739042 seconds to sort an array of size 10000.
+
+Best Case: 
+InsertionSort took 8.92458e-007 seconds to sort an array of size 10.
+InsertionSort took 3.1236e-006 seconds to sort an array of size 100.
+InsertionSort took 2.76662e-005 seconds to sort an array of size 1000.
+InsertionSort took 0.000275323 seconds to sort an array of size 10000.
+
+Worst Case: 
+InsertionSort took 1.78492e-006 seconds to sort an array of size 10.
+InsertionSort took 0.000137438 seconds to sort an array of size 100.
+InsertionSort took 0.0140883 seconds to sort an array of size 1000.
+InsertionSort took 1.4527 seconds to sort an array of size 10000.
+
+Run 3:
+
+Random Numbers: 
+InsertionSort took 1.33869e-006 seconds to sort an array of size 10.
+InsertionSort took 7.05041e-005 seconds to sort an array of size 100.
+InsertionSort took 0.00723917 seconds to sort an array of size 1000.
+InsertionSort took 0.72385 seconds to sort an array of size 10000.
+
+Best Case: 
+InsertionSort took 8.92458e-007 seconds to sort an array of size 10.
+InsertionSort took 2.67737e-006 seconds to sort an array of size 100.
+InsertionSort took 2.722e-005 seconds to sort an array of size 1000.
+InsertionSort took 0.000353413 seconds to sort an array of size 10000.
+
+Worst Case: 
+InsertionSort took 1.78492e-006 seconds to sort an array of size 10.
+InsertionSort took 0.000163766 seconds to sort an array of size 100.
+InsertionSort took 0.0150071 seconds to sort an array of size 1000.
+InsertionSort took 1.43905 seconds to sort an array of size 10000.

@@ -1,0 +1,200 @@
+26475
+Davidson
+Dustin
+3299 W. Lehr Blvd.
+Winooski
+VT
+05404
+(514) 223 0246
+Mechanical Engineering
+1.442
+41044
+Armstrong
+Dennis
+1980 W. Lincoln Rd.
+Winooski
+VT
+05404
+(808) 653 5538
+Computer Science
+2.363
+43022
+Addis
+Karen
+3826 S. College Rd.
+Burlington
+VT
+05401
+(647) 442 7500
+Physics
+4
+60115
+Montgomery
+Grace
+2662 S. Edwards Blvd.
+Burlington
+VT
+05401
+(834) 726 1671
+Physics
+1.395
+21065
+Creamer
+Sam
+958 W. Gilbert Rd.
+Burlington
+VT
+05401
+(216) 433 1307
+Computer Science
+3.713
+01463
+Thompson
+Amanda
+828 E. Lincoln Ave.
+Colchester
+VT
+05439
+(457) 131 7285
+Computer Engineering
+1.058
+51066
+Davidson
+Jane
+1427 W. College St.
+Burlington
+VT
+05401
+(844) 723 4174
+Civil Engineering
+0.762
+50883
+Leigh
+Katrina
+2433 E. Lima St.
+Burlington
+VT
+05401
+(540) 800 4153
+Chemistry
+3.293
+64744
+Watson
+Monica
+1743 E. College Ave.
+Burlington
+VT
+05401
+(620) 043 3436
+Mathematics
+2.989
+08433
+Holmes
+Sebastian
+616 S. Third Rd.
+South Burlington
+VT
+05403
+(311) 560 1067
+Mathematics
+0.992
+08661
+Le Blanc
+Dustin
+4513 N. Edwards Ave.
+Winooski
+VT
+05404
+(503) 520 1430
+Mathematics
+3.99
+35321
+Montgomery
+Fenny
+53 N. Lincoln Rd.
+South Burlington
+VT
+05403
+(484) 665 3523
+Computer Engineering
+3.733
+37362
+Morgan
+Ada
+1211 S. Edwards St.
+Winooski
+VT
+05404
+(251) 074 8611
+Chemistry
+3.851
+52861
+Watson
+Zoe
+3955 N. RealmSecond Ave.
+Burlington
+VT
+05401
+(360) 078 6482
+Computer Engineering
+3.512
+28672
+Morgan
+Edwin
+3869 S. High Rd.
+Colchester
+VT
+05439
+(843) 871 2568
+Mathematics
+4
+66772
+Davidson
+Jane
+2962 S.  Rd.
+Essex Junction
+VT
+05452
+(387) 180 6371
+Statistic
+1.551
+52723
+McMaster
+Max
+2314 N. Lincoln Rd.
+South Burlington
+VT
+05403
+(051) 600 2236
+Mathematics
+1.068
+84304
+Jones
+Aaron
+180 W. Gilbert Blvd.
+Burlington
+VT
+05401
+(577) 875 4160
+Chemistry
+1.061
+74060
+Tolkien
+Helen
+3395 E. Fifth St.
+Winooski
+VT
+05404
+(223) 757 6824
+Electrical Engineering
+3.84
+78811
+Watson
+Dennis
+3447 N. Simon Blvd.
+Essex Junction
+VT
+05452
+(813) 066 6025
+Computer Engineering
+0.849

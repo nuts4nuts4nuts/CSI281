@@ -1,0 +1,200 @@
+58787
+Rowling
+John David
+3019 E. Third St.
+Burlington
+VT
+05401
+(436) 740 5104
+ITS
+Adjunct
+55804
+Rund
+Monica
+2771 W. Fifth Ave.
+Burlington
+VT
+05401
+(066) 871 5311
+EHS
+Adjunct
+23628
+Du Point
+Issac
+4992 S. Gilbert Blvd.
+Colchester
+VT
+05439
+(267) 726 4506
+ITS
+Adjunct
+14281
+Clayton
+Sharon
+1187 W. Edwards Ave.
+South Burlington
+VT
+05403
+(210) 860 6364
+CCM
+Associate Professor
+71118
+Rund
+Jimmy
+3663 W. Third St.
+Essex Junction
+VT
+05452
+(340) 082 6672
+EHS
+Adjunct
+16385
+Winsor
+William
+3365 W. First Rd.
+Winooski
+VT
+05404
+(367) 262 5404
+EHS
+Associate Professor
+33341
+Landry
+Sam
+2212 E.  Rd.
+South Burlington
+VT
+05403
+(507) 653 2067
+CCM
+Adjunct
+13242
+Henderson
+Zoe
+1667 W. RealmSecond Ave.
+Essex Junction
+VT
+05452
+(225) 366 0511
+ITS
+Associate Professor
+76866
+Mulligan
+John David
+4703 E. Clint Ave.
+South Burlington
+VT
+05403
+(435) 613 7852
+CCM
+Instructor
+40448
+Samson
+Max
+2068 S. Lincoln St.
+South Burlington
+VT
+05403
+(486) 422 3523
+EHS
+Associate Professor
+57878
+Orr
+Eric
+2731 E. Third Ave.
+Burlington
+VT
+05401
+(334) 866 6121
+ITS
+Professor
+87655
+Lee
+Dustin
+2512 S. University Ave.
+Colchester
+VT
+05439
+(867) 231 1456
+ITS
+Assistant Professor
+40867
+Morgan
+Amy
+3669 W. Hays Rd.
+Burlington
+VT
+05401
+(424) 680 7875
+CCM
+Associate Professor
+43375
+Samson
+Harry
+3938 N. Simon St.
+Burlington
+VT
+05401
+(851) 186 6386
+BUS
+Adjunct
+58151
+Montgomery
+Tanya
+3217 S. RealmSecond Rd.
+South Burlington
+VT
+05403
+(045) 646 5366
+ITS
+Professor
+65686
+Samson
+Lisa
+1249 N. Edwards Blvd.
+Winooski
+VT
+05404
+(281) 512 6578
+BUS
+Assistant Professor
+23326
+Manning
+Fenny
+4451 W. High Blvd.
+Burlington
+VT
+05401
+(247) 667 7174
+EHS
+Adjunct
+03058
+Le Blanc
+Justin
+773 W. Gilbert St.
+Essex Junction
+VT
+05452
+(435) 387 4726
+CCM
+Adjunct
+58572
+Douglas
+Charles
+546 E. Edwards Blvd.
+Essex Junction
+VT
+05452
+(530) 471 5653
+ITS
+Associate Professor
+42510
+Rund
+Diana
+3122 N. High Ave.
+Winooski
+VT
+05404
+(044) 064 4617
+CCM
+Associate Professor
