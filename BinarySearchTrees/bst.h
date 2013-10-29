@@ -140,38 +140,6 @@ bool BST<T>::dfs(T searchKey)
 	bool nodeFound = false;
 
 	nodeStack.push(tmp);
-
-	while(nodeStack.getCount() > 0 && !nodeFound)
-	{
-		tmp = nodeStack.pop();
-
-		if(tmp->mData == searchKey)
-		{
-			cout << tmp->mData;
-			nodeFound = true;
-		}
-		else
-		{
-			if(tmp->mLeft != NULL)
-			{
-				nodeQueue.enqueue(tmp->mLeft);
-			}
-
-			if(tmp->mRight != NULL)
-			{
-				nodeQueue.enqueue(tmp->mRight);
-			}
-
-			cout << tmp->mData << " ";
-		}
-	}
-
-	if(!nodeFound)
-	{
-		cout << "ERROR, NODE NOT FOUND";
-	}
-
-	return nodeFound;
 }
 
 
