@@ -23,43 +23,44 @@ struct BST_Node
    T           mData;
    BST_Node<T> *mLeft, *mRight;
 
-   /*      Pre:  None
-    *     Post:  This object is initialized using default values
-    *  Purpose:  To intialize date object
-    *************************************************************************/
-   BST_Node()
-   {
-      mData = T();
-      mLeft = NULL;
-      mRight = NULL;
-   }
-
-
-   /*      Pre:  None
-    *     Post:  This object is initialized using specified data
-    *  Purpose:  To intialize date object, and left and right are NULL
-    *************************************************************************/
-   BST_Node(T data)
-   {
-      mData = data;
-      mLeft = NULL;
-      mRight = NULL;
-   }
-
-
-   /*      Pre:  None
-    *     Post:  This object is initialized using specified data
-    *  Purpose:  To intialize date object, left and right are not NULL
-    *************************************************************************/
-   BST_Node(T data, BST_Node<T> *left, BST_Node<T> *right)
-   {
-      mData = data;
-      mLeft = left;
-      mRight = right;
-   }
+   BST_Node();
+   BST_Node(T data);
+   BST_Node(T data, BST_Node<T> *left, BST_Node<T> *right);
 };
 
 
+/*      Pre:  None
+   *     Post:  This object is initialized using default values
+   *  Purpose:  To intialize date object
+   *************************************************************************/
+template <class T>
+BST_Node<T>::BST_Node()
+{
+   mData = T();
+   mLeft = NULL;
+   mRight = NULL;
+}
 
+
+/*      Pre:  None
+   *     Post:  This object is initialized using specified data
+   *  Purpose:  To intialize date object
+   *************************************************************************/
+template <class T>
+BST_Node<T>::BST_Node(T data)
+{
+   mData = data;
+   mLeft = NULL;
+   mRight = NULL;
+}
+
+
+template <class T>
+BST_Node<T>::BST_Node(T data, BST_Node<T> *left, BST_Node<T> *right)
+{
+   mData = data;
+   mLeft = left;
+   mRight = right;
+}
 
 #endif

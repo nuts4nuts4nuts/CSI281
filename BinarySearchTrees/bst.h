@@ -18,21 +18,32 @@ class BST
 		void displayInOrder(BST_Node<T> *node);
 		void displayPreOrder(BST_Node<T> *node);
 		void displayPostOrder(BST_Node<T> *node);
-		void insert(BST_Node<T> *&node, T data);
+		void displayTree(BST_Node<T> *node, int tab);
+		int getHeight(BST_Node<T> *node);
+		void insert(BST_Node<T> *&node, const T &data);
+		int leavesCount(BST_Node<T> *node);
 		void makeDeletion(BST_Node<T> *&node);
-		void remove(BST_Node<T> *&node, T searchKey);
+		int nodesCount(BST_Node<T> *node);
+		void remove(BST_Node<T> *&node, const T &searchKey);
 
 	public:
 		BST();
 		~BST();
 
+		bool bfs(T searchKey);
+		bool dfs(T searchKey);
+		int  getHeight();
 		void insert(T data);
-      bool isEmpty();
+		bool isEmpty();
 		bool isExists(T searchKey);
+		int  leavesCount();
+		int  nodesCount();
+		void printPath(T searchKey);
 		void remove(T searchKey);
 		void showInOrder();
 		void showPreOrder();
 		void showPostOrder();
+		void showTree();
 };
 
 
@@ -62,7 +73,27 @@ BST<T>::~BST()
 
 
 template <class T>
+bool BST<T>::bfs(T searchKey)
+{
+}
+
+
+template <class T>
 void BST<T>::destroySubtree(BST_Node<T> *node)
+{
+	if (node == NULL)
+		return;
+
+	destroySubtree(node->mLeft);
+	destroySubtree(node->mRight);
+
+	// Delete the node at the root.
+	delete node;
+}
+
+
+template <class T>
+bool BST<T>::dfs(T searchKey)
 {
 }
 
@@ -70,18 +101,61 @@ void BST<T>::destroySubtree(BST_Node<T> *node)
 template <class T>
 void BST<T>::displayInOrder(BST_Node<T> *node)
 {
+	if (node != NULL)
+	{
+		displayInOrder(node->mLeft);
+		cout << node->mData << "  ";
+		displayInOrder(node->mRight);
+	}
 }
 
 
 template <class T>
 void BST<T>::displayPreOrder(BST_Node<T> *node)
 {
+	if (node != NULL)
+	{
+		cout << node->mData << "  ";
+		displayPreOrder(node->mLeft);		
+		displayPreOrder(node->mRight);
+	}
 }
 
 
 template <class T>
 void BST<T>::displayPostOrder(BST_Node<T> *node)
 {
+	if (node != NULL)
+	{
+		displayPostOrder(node->mLeft);		
+		displayPostOrder(node->mRight);
+		cout << node->mData << "  ";
+	 }
+}
+
+
+template <class T>
+void BST<T>::displayTree(BST_Node<T> *node, int tab)
+{
+}
+
+
+template <class T>
+int BST<T>::getHeight()
+{
+	return getHeight(mRootNode) - 1;
+}
+
+
+template <class T>
+int BST<T>::getHeight(BST_Node<T> *node)
+{
+	if (node == NULL)
+	{
+		return 0;
+	}
+
+  return 1 + max(getHeight(node->mLeft), getHeight(node->mRight));
 }
 
 
@@ -93,19 +167,26 @@ void BST<T>::insert(T data)
 
 
 template <class T>
-void BST<T>::insert(BST_Node<T> *&node, T data)
+void BST<T>::insert(BST_Node<T> *&node, const T &data)
 {
-	BST_Node<T> *newNode;
-
-	newNode = new BST_Node(data);
-
-	if(data > node->mData)
-	{
-		if(node->mData == NULL)
-		{
-			//node->mRight =
-		}
+	// If the tree is empty, make a new node and make it 
+	// the root of the tree.
+	if (node == NULL)
+	{ 
+		node = new BST_Node<T>(data);
+		return;
 	}
+		
+	// If num is already in tree: return.
+	if (node->mData == data)
+	  return;
+
+	// The tree is not empty: insert the new node into the
+	// left or right subtree.
+	if (data < node->mData)
+		insert(node->mLeft, data);
+	else
+		insert(node->mRight, data);
 }
 
 
@@ -119,17 +200,127 @@ bool BST<T>::isEmpty()
 template <class T>
 bool BST<T>::isExists(T searchKey)
 {
+	BST_Node<T> *tmp = mRootNode;
+
+	while (tmp != NULL)
+	{
+		if (tmp->mData == searchKey)
+			return true;
+		else if (tmp->mData > searchKey)
+			tmp = tmp->mLeft;
+		else
+			tmp = tmp->mRight;
+	}
+	return false;
+}
+
+
+template <class T>
+int BST<T>::leavesCount()
+{
+	return leavesCount(mRootNode);
+}
+
+
+template <class T>
+int BST<T>::leavesCount(BST_Node<T> *node)
+{
+	int leaveCount = 0;
+
+	if(node->mRight == NULL && node->mLeft == NULL)
+	{
+		leaveCount++;
+	}
+	else
+	{
+		if(node->mRight != NULL)
+		{
+			leaveCount += leavesCount(node->mRight);
+		}
+		if(node->mLeft != NULL)
+		{
+			leaveCount += leavesCount(node->mLeft);
+		}
+	}
+
+	return leaveCount;
 }
 
 
 template <class T>
 void BST<T>::makeDeletion(BST_Node<T> *&node)
 {
+	// Used to hold node that will be deleted.
+	BST_Node<T> *nodeToDelete = node; 
+	
+	// Used to locate the  point where the 
+	// left subtree is attached.
+	BST_Node<T> *attachPoint;          
+				
+	if (node->mRight == NULL)
+	{
+		  // Replace tree with its left subtree. 
+		  node = node->mLeft;
+	}            
+	else if (node->mLeft == NULL)   	
+	{
+		  // Replace tree with its right subtree.
+		  node = node->mRight;
+	}  	
+	else
+	  //The node has two children
+	{
+		 // Move to right subtree.
+		 attachPoint = node->mRight;
+
+		 // Locate the smallest node in the right subtree
+		 // by moving as far to the left as possible.
+		 while (attachPoint->mLeft != NULL)
+			 attachPoint = attachPoint->mLeft;
+
+		 // Attach the left subtree of the original tree
+		 // as the left subtree of the smallest node 
+		 // in the right subtree.
+		 attachPoint->mLeft = node->mLeft;
+
+		 // Replace the original tree with its right subtree.
+		 node = node->mRight;       
+	  }
+
+	 // Delete root of original tree
+	 delete nodeToDelete;
 }
 
 
 template <class T>
-void BST<T>::remove(BST_Node<T> *&node, T searchKey)
+int BST<T>::nodesCount()
+{
+	return nodesCount(mRootNode);
+}
+
+
+template <class T>
+int BST<T>::nodesCount(BST_Node<T> *node)
+{
+	int nodeCount = 0;
+	if (node != NULL)
+	{
+		nodeCount = 1 + nodesCount(node->mLeft) + nodesCount(node->mRight);
+    }
+
+    return nodeCount;
+}
+
+
+template <class T>
+void BST<T>::printPath(T searchKey)
+{
+
+}
+
+
+template <class T>
+void BST<T>::remove(BST_Node<T> *&node, const T &searchKey)
 {
 	if (node == NULL)
 		return;
@@ -170,5 +361,10 @@ void BST<T>::showPostOrder()
 	displayPostOrder(mRootNode);
 }
 
+
+template <class T>
+void BST<T>::showTree()
+{
+}
 
 #endif

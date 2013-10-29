@@ -90,6 +90,20 @@ int main()
    tree.showPostOrder();
    cout << endl;
 
+   cout << "***\n";
+
+   cout << "Number of nodes: ";
+   cout << tree.nodesCount();
+   cout << endl;
+
+   cout << "Number of leaves: ";
+   cout << tree.leavesCount();
+   cout << endl;
+
+   cout << "Height of tree: ";
+   cout << tree.getHeight();
+   cout << endl;
+
    system("pause");
 
    return 0;
