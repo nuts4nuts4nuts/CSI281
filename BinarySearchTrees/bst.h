@@ -2,6 +2,7 @@
 #define _BST_H
 
 #include <iostream>
+#include <sstream>
 #include "bst-node.h"
 #include "queue.h"
 #include "stack.h"
@@ -80,6 +81,8 @@ bool BST<T>::bfs(T searchKey)
 {
 	Queue<BST_Node<T>*> nodeQueue;
 	BST_Node<T>* tmp;
+	stringstream pathStream;
+
 	bool nodeFound = false;
 
 	nodeQueue.enqueue(mRootNode);
@@ -90,7 +93,7 @@ bool BST<T>::bfs(T searchKey)
 
 		if(tmp->mData == searchKey)
 		{
-			cout << tmp->mData;
+			pathStream << tmp->mData;
 			nodeFound = true;
 		}
 		else
@@ -105,13 +108,17 @@ bool BST<T>::bfs(T searchKey)
 				nodeQueue.enqueue(tmp->mRight);
 			}
 
-			cout << tmp->mData << " ";
+			pathStream << tmp->mData << " ";
 		}
 	}
 
 	if(!nodeFound)
 	{
 		cout << "ERROR, NODE NOT FOUND";
+	}
+	else
+	{
+		cout << pathStream.str();
 	}
 
 	return nodeFound;
@@ -137,9 +144,47 @@ bool BST<T>::dfs(T searchKey)
 {
 	Stack<BST_Node<T>*> nodeStack;
 	BST_Node<T>* tmp = mRootNode;
+	stringstream pathStream;
+
 	bool nodeFound = false;
 
 	nodeStack.push(tmp);
+
+	while(nodeStack.getCount() > 0 && !nodeFound)
+	{
+		tmp = nodeStack.pop();
+
+		if(tmp->mData == searchKey)
+		{
+			pathStream << tmp->mData;
+			nodeFound = true;
+		}
+		else
+		{
+			if(tmp->mRight != NULL)
+			{
+				nodeStack.push(tmp->mRight);
+			}
+
+			if(tmp->mLeft != NULL)
+			{
+				nodeStack.push(tmp->mLeft);
+			}
+
+			pathStream << tmp->mData << " ";
+		}
+	}
+
+	if(!nodeFound)
+	{
+		cout << "ERROR, NODE NOT FOUND";
+	}
+	else
+	{
+		cout << pathStream.str();
+	}
+
+	return nodeFound;
 }
 
 
@@ -182,7 +227,12 @@ void BST<T>::displayPostOrder(BST_Node<T> *node)
 template <class T>
 void BST<T>::displayTree(BST_Node<T> *node, int tab)
 {
-	
+	for(int i = 0; i < tab; i++)
+	{
+		cout << "\t";
+	}
+
+	cout << node->mData << endl;
 }
 
 
@@ -362,13 +412,15 @@ template <class T>
 void BST<T>::printPath(T searchKey)
 {
 	BST_Node<T>* currentNode = mRootNode;
+	stringstream pathStream;
+
 	bool nodeFound = false;
 
 	while(currentNode != NULL)
 	{
 		if(currentNode->mData == searchKey && currentNode != NULL)
 		{
-			cout << currentNode->mData;
+			pathStream << currentNode->mData;
 			nodeFound = true;
 			break;
 		}
@@ -376,12 +428,12 @@ void BST<T>::printPath(T searchKey)
 		{
 			if(currentNode->mData > searchKey && currentNode != NULL)
 			{
-				cout << currentNode->mData << " ";
+				pathStream << currentNode->mData << " ";
 				currentNode = currentNode->mLeft;
 			}
 			else if(currentNode != NULL)
 			{
-				cout << currentNode->mData << " ";
+				pathStream << currentNode->mData << " ";
 				currentNode = currentNode->mRight;
 			}
 		}
@@ -390,6 +442,10 @@ void BST<T>::printPath(T searchKey)
 	if(!nodeFound)
 	{
 		cout << "ERROR, NODE NOT FOUND";
+	}
+	else
+	{
+		cout << pathStream.str();
 	}
 }
 
@@ -440,9 +496,37 @@ void BST<T>::showPostOrder()
 template <class T>
 void BST<T>::showTree()
 {
-	Queue<BST_Node<T>> nodeQueue;
-	nodeQueue.enqueue(mRootNode);
+	Stack<BST_Node<T>*> nodeStack;
+	BST_Node<T>* tmp = mRootNode;
+	int nodeLayer = 0;
 
+	nodeStack.push(tmp);
+
+	while(nodeStack.getCount() > 0)
+	{
+		tmp = nodeStack.pop();
+
+		if(tmp->mRight != NULL)
+		{
+			nodeStack.push(tmp->mRight);
+		}
+
+		if(tmp->mLeft != NULL)
+		{
+			nodeStack.push(tmp->mLeft);
+		}
+
+		displayTree(tmp, nodeLayer);
+
+		if(tmp->mLeft != NULL || tmp->mRight != NULL)
+		{
+			nodeLayer++;
+		}
+		else
+		{
+			nodeLayer--;
+		}
+	}
 }
 
 #endif

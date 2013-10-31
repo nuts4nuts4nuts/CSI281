@@ -77,6 +77,23 @@ int main()
 
    cout << "Inserting:  9\n";
    tree.insert(9);
+   
+   cout << "Inorder:  ";
+   tree.showInOrder();
+   cout << endl;
+
+   cout << "Preorder:  ";
+   tree.showPreOrder();
+   cout << endl;
+
+   cout << "Postorder:  ";
+   tree.showPostOrder();
+   cout << endl;
+
+   cout << "***\n";
+
+   cout << "Inserting: 1\n";
+   tree.insert(1);
 
    cout << "Inorder:  ";
    tree.showInOrder();
@@ -114,6 +131,8 @@ int main()
    tree.printPath(10);
    cout << endl;
 
+   cout << "***\n";
+
    cout << "Breadth first search for 9: ";
    tree.bfs(9);
    cout << endl;
@@ -121,6 +140,21 @@ int main()
    cout << "Breadth first search for 10: ";
    tree.bfs(10);
    cout << endl;
+
+   cout << "***\n";
+
+   cout << "Depth first search for 9: ";
+   tree.dfs(9);
+   cout << endl;
+
+   cout << "Depth first search for 10: ";
+   tree.dfs(10);
+   cout << endl;
+
+   cout << "***\n";
+
+   cout << "Display tree:\n";
+   tree.showTree();
 
    system("pause");
 
