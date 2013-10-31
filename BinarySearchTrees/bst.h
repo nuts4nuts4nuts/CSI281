@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "bst-node.h"
+#include "queue.h"
+#include "stack.h"
 
 using namespace std;
 
@@ -40,6 +42,7 @@ class BST
 		int  nodesCount();
 		void printPath(T searchKey);
 		void remove(T searchKey);
+		bool search(T searchKey);
 		void showInOrder();
 		void showPreOrder();
 		void showPostOrder();
@@ -75,6 +78,43 @@ BST<T>::~BST()
 template <class T>
 bool BST<T>::bfs(T searchKey)
 {
+	Queue<BST_Node<T>*> nodeQueue;
+	BST_Node<T>* tmp;
+	bool nodeFound = false;
+
+	nodeQueue.enqueue(mRootNode);
+
+	while(nodeQueue.getCount() > 0 && !nodeFound)
+	{
+		tmp = nodeQueue.dequeue();
+
+		if(tmp->mData == searchKey)
+		{
+			cout << tmp->mData;
+			nodeFound = true;
+		}
+		else
+		{
+			if(tmp->mLeft != NULL)
+			{
+				nodeQueue.enqueue(tmp->mLeft);
+			}
+
+			if(tmp->mRight != NULL)
+			{
+				nodeQueue.enqueue(tmp->mRight);
+			}
+
+			cout << tmp->mData << " ";
+		}
+	}
+
+	if(!nodeFound)
+	{
+		cout << "ERROR, NODE NOT FOUND";
+	}
+
+	return nodeFound;
 }
 
 
@@ -95,6 +135,11 @@ void BST<T>::destroySubtree(BST_Node<T> *node)
 template <class T>
 bool BST<T>::dfs(T searchKey)
 {
+	Stack<BST_Node<T>*> nodeStack;
+	BST_Node<T>* tmp = mRootNode;
+	bool nodeFound = false;
+
+	nodeStack.push(tmp);
 }
 
 
@@ -137,6 +182,7 @@ void BST<T>::displayPostOrder(BST_Node<T> *node)
 template <class T>
 void BST<T>::displayTree(BST_Node<T> *node, int tab)
 {
+	
 }
 
 
@@ -315,7 +361,36 @@ int BST<T>::nodesCount(BST_Node<T> *node)
 template <class T>
 void BST<T>::printPath(T searchKey)
 {
+	BST_Node<T>* currentNode = mRootNode;
+	bool nodeFound = false;
 
+	while(currentNode != NULL)
+	{
+		if(currentNode->mData == searchKey && currentNode != NULL)
+		{
+			cout << currentNode->mData;
+			nodeFound = true;
+			break;
+		}
+		else
+		{
+			if(currentNode->mData > searchKey && currentNode != NULL)
+			{
+				cout << currentNode->mData << " ";
+				currentNode = currentNode->mLeft;
+			}
+			else if(currentNode != NULL)
+			{
+				cout << currentNode->mData << " ";
+				currentNode = currentNode->mRight;
+			}
+		}
+	}
+
+	if(!nodeFound)
+	{
+		cout << "ERROR, NODE NOT FOUND";
+	}
 }
 
 
@@ -365,6 +440,9 @@ void BST<T>::showPostOrder()
 template <class T>
 void BST<T>::showTree()
 {
+	Queue<BST_Node<T>> nodeQueue;
+	nodeQueue.enqueue(mRootNode);
+
 }
 
 #endif

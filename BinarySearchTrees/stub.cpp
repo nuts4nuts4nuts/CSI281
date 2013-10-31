@@ -104,6 +104,24 @@ int main()
    cout << tree.getHeight();
    cout << endl;
 
+   cout << "***\n";
+
+   cout << "Path of tree to 9: ";
+   tree.printPath(9);
+   cout << endl;
+
+   cout << "Path of tree to 10: ";
+   tree.printPath(10);
+   cout << endl;
+
+   cout << "Breadth first search for 9: ";
+   tree.bfs(9);
+   cout << endl;
+
+   cout << "Breadth first search for 10: ";
+   tree.bfs(10);
+   cout << endl;
+
    system("pause");
 
    return 0;
