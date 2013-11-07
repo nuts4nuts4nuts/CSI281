@@ -1,3 +1,12 @@
+/*Author: David Johnston
+Class: CSI-281-01
+Assignment: pa 7
+Date Assigned: 10/31/13
+Due Date: 11/07/13 - 12:30
+Description: The purpose of this program is to recieve a message and encrypt it based on a codebook.
+Certification of Authenticity:
+I certify that this assignment is entirely my own work.*/
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -7,9 +16,14 @@
 
 using namespace std;
 
-const uint32_t PRIME = 16777619;
-const uint32_t SEED = 2166136261;
+const uint32_t PRIME = 16777619; //Large prime optimal for 32-bit fnv algorithm
+const uint32_t SEED = 2166136261; //Seed optimal for 32-bit fnv algorithm
 
+
+/*      Pre:  We have a file which we want to encrypt, and a codebook loaded into arrays.
+ *     Post:  We have an encrypted file.
+ *  Purpose:  To encrypt a file according to a codebook.
+ *****************************************************************************/
 void encryptFile(string inFile, string codeArray[], string nameArray[])
 {
 	TimerSystem timer;
@@ -19,14 +33,13 @@ void encryptFile(string inFile, string codeArray[], string nameArray[])
 	bool wordFound = true;
 	uint32_t currentHash = 0;
 	int collisionOffset = 0;
+	int trueIndex = currentHash + collisionOffset;
 
 	string outFile;
 	ifstream inStream;
 	ofstream outStream;
 
 	int numWords = 0;
-	string *inArray;
-	string *outArray;
 
 	inStream.open(inFile);
 
@@ -37,53 +50,30 @@ void encryptFile(string inFile, string codeArray[], string nameArray[])
 
 		outStream.open(outFile);
 
+		timer.startClock();
 		while(!inStream.eof())
 		{
 			inStream >> currentWord;
-			numWords++;
-		}
-
-		inStream.clear();
-		inStream.seekg(0, ios::beg);
-
-		inArray = new string[numWords];
-		outArray = new string[numWords];
-
-		for(int i = 0; i < numWords; i++)
-		{
-			inStream >> inArray[i];
-		}
-
-		inStream.clear();
-		inStream.seekg(0, ios::beg);
-
-		timer.startClock();
-		for(int i = 0; i < numWords; i++)
-		{
-			currentWord = inArray[i];
 			currentHash = stringHash(currentWord.c_str(), currentWord.length());
+			trueIndex = currentHash;
 
-			if(nameArray[currentHash + collisionOffset] != currentWord)
+			if(nameArray[trueIndex] != currentWord)
 			{
-				while(nameArray[currentHash + collisionOffset] != currentWord && wordFound)
+				while(nameArray[trueIndex] != currentWord && wordFound)
 				{
-					collisionOffset++;
+					trueIndex++;
 					
-					if(codeArray[currentHash + collisionOffset] != "")
+					if(codeArray[trueIndex] != "")
 					{
 						wordFound = false;
 					}
 				}
 
-				collisionOffset = 0;
-
-				outArray[i] = currentWord;
+				outStream << currentWord;
 			}
 			else
 			{
-				outArray[i] = codeArray[currentHash + collisionOffset];
-
-				collisionOffset = 0;
+				outStream << codeArray[trueIndex] << " ";
 			}
 		}
 
@@ -96,18 +86,16 @@ void encryptFile(string inFile, string codeArray[], string nameArray[])
 		cout << "Oops, that file does not exist.";
 	}
 
-	for(int i = 0; i < numWords; i++)
-	{
-		outStream << outArray[i] << " ";
-	}
-
-	delete []inArray;
-	delete []outArray;
-
 	inStream.close();
 	outStream.close();
 }
 
+
+/*      Pre:  We have the name of the codebook which we would like to load,
+			  and two large array in which to load the book.
+ *     Post:  We have a codebook loaded into two arrays.
+ *  Purpose:  To load a codebook into two arrays, indexed by a hashing algorithm.
+ *****************************************************************************/
 void loadCodebook(string codeArray[], string nameArray[], string bookName)
 {
 	ifstream inStream;
@@ -139,6 +127,11 @@ void loadCodebook(string codeArray[], string nameArray[], string bookName)
 
 }
 
+
+/*      Pre:  We have a string we would like to hash.
+ *     Post:  We have a (in this case) 23-bit hash value.
+ *  Purpose:  To quickly and effectively hash a string.
+ *****************************************************************************/
 uint32_t stringHash(const char *theString, int numChars)
 {
 	uint32_t hash = SEED;
@@ -151,6 +144,11 @@ uint32_t stringHash(const char *theString, int numChars)
 	return (hash>>24) ^ (hash & MASK_23);
 }
 
+
+/*      Pre:  We have one byte we would like to hash.
+ *     Post:  We have a 32-bit hash value.
+ *  Purpose:  To nicely hash a single byte.
+ *****************************************************************************/
 uint32_t fnv1a(unsigned char oneChar, uint32_t hash)
 {
 	return (oneChar ^ hash) * PRIME;

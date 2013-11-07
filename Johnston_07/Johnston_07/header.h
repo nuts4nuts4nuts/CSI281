@@ -1,3 +1,12 @@
+/*Author: David Johnston
+Class: CSI-281-01
+Assignment: pa 7
+Date Assigned: 10/31/13
+Due Date: 11/07/13 - 12:30
+Description: The purpose of this program is to recieve a message and encrypt it based on a codebook.
+Certification of Authenticity:
+I certify that this assignment is entirely my own work.*/
+
 #ifndef HEADER_H
 #define HEADER_H
 
