@@ -20,11 +20,12 @@ int main()
 	{
 		cout << "\nPlease enter the name of your input file: ";
 		cin >> inFile;
-		cout << "\nPlease enter the name of your output file: ";
-		cin >> outFile;
 
-		encryptFile(inFile, outFile, codeArray, nameArray);
+		encryptFile(inFile, codeArray, nameArray);
 	}
+
+	delete []codeArray;
+	delete []nameArray;
 
 	return 0;
 }

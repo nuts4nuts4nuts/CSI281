@@ -10,7 +10,7 @@
 using namespace std;
 
 uint32_t fnv1a(unsigned char oneChar, uint32_t hash);
-void encryptFile(string inFile, string outfile, string codeArray[], string nameArray[]);
+void encryptFile(string inFile, string codeArray[], string nameArray[]);
 void loadCodebook(string codeArray[], string nameArray[], string bookName);
 uint32_t stringHash(const char *theString, int numChars);
 

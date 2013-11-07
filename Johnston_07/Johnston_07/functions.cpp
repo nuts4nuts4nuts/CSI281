@@ -10,7 +10,7 @@ using namespace std;
 const uint32_t PRIME = 16777619;
 const uint32_t SEED = 2166136261;
 
-void encryptFile(string inFile, string outFile, string codeArray[], string nameArray[])
+void encryptFile(string inFile, string codeArray[], string nameArray[])
 {
 	TimerSystem timer;
 	double time = 0;
@@ -20,6 +20,7 @@ void encryptFile(string inFile, string outFile, string codeArray[], string nameA
 	uint32_t currentHash = 0;
 	int collisionOffset = 0;
 
+	string outFile;
 	ifstream inStream;
 	ofstream outStream;
 
@@ -31,6 +32,9 @@ void encryptFile(string inFile, string outFile, string codeArray[], string nameA
 
 	if(inStream.good())
 	{
+		cout << "\nPlease enter the name of your output file: ";
+		cin >> outFile;
+
 		outStream.open(outFile);
 
 		while(!inStream.eof())
@@ -40,6 +44,8 @@ void encryptFile(string inFile, string outFile, string codeArray[], string nameA
 		}
 
 		inStream.clear();
+		inStream.seekg(0, ios::beg);
+
 		inArray = new string[numWords];
 		outArray = new string[numWords];
 
@@ -49,6 +55,7 @@ void encryptFile(string inFile, string outFile, string codeArray[], string nameA
 		}
 
 		inStream.clear();
+		inStream.seekg(0, ios::beg);
 
 		timer.startClock();
 		for(int i = 0; i < numWords; i++)
@@ -74,7 +81,9 @@ void encryptFile(string inFile, string outFile, string codeArray[], string nameA
 			}
 			else
 			{
-				outArray[i] = codeArray[currentHash + collisionOffset] + " ";
+				outArray[i] = codeArray[currentHash + collisionOffset];
+
+				collisionOffset = 0;
 			}
 		}
 
@@ -86,6 +95,14 @@ void encryptFile(string inFile, string outFile, string codeArray[], string nameA
 	{
 		cout << "Oops, that file does not exist.";
 	}
+
+	for(int i = 0; i < numWords; i++)
+	{
+		outStream << outArray[i] << " ";
+	}
+
+	delete []inArray;
+	delete []outArray;
 
 	inStream.close();
 	outStream.close();
